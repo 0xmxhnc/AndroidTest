@@ -18,11 +18,11 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         Intent intent = getIntent();
         String data = intent.getStringExtra("extra_data");
-        integer = integer.valueOf(data);
-        textView = (TextView)findViewById(R.id.sectext1);
-        button = (Button)findViewById(R.id.secbutton1);
+        long num = (long) integer.parseInt(data);
+        textView = (TextView)findViewById(R.id.text2);
+        button = (Button)findViewById(R.id.button2);
 
-        CountDownTimer timer = new CountDownTimer(integer * 1000, 1000) {
+        CountDownTimer timer = new CountDownTimer(num * 1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 // TODO Auto-generated method stub

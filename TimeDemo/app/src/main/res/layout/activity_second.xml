@@ -5,18 +5,18 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/sectext1"
+        android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="倒计时"
+        android:text="倒计时计时器"
         android:gravity="center_horizontal"
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/secbutton1"
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="显示"
+        android:text="Display"
         android:textSize="24sp" />
 
 </LinearLayout>
