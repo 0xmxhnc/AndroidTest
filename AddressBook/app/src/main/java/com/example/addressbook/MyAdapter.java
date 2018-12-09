@@ -55,7 +55,6 @@ public class MyAdapter extends BaseAdapter {
         TextView textView = (TextView)view.findViewById(R.id.text_name);
         TextView textView1 = (TextView)view.findViewById(R.id.text_phonenumber);
         ImageView imageView = (ImageView)view.findViewById(R.id.image);
-
         //设置内容
         textView.setText(personlist.get(position).getName());
         textView1.setText(personlist.get(position).getPhonenum());
@@ -63,6 +62,4 @@ public class MyAdapter extends BaseAdapter {
 
         return view;
     }
-
-
 }

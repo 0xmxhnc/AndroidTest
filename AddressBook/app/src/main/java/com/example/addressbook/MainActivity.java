@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
                 Person p7 = new Person(name, number, R.drawable.pineapple_pic);
                 personList.add(p7);
-
             }
         });
     }
