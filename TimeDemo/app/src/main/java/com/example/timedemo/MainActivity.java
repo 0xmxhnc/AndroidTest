@@ -20,9 +20,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Start(View view) {
+        //获取编辑框中输入的数值
         String data = editText.getText().toString();
+        //new一个新活动
         Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+        //绑定数值，供下一个活动使用
         intent.putExtra("extra_data", data);
+        //启动新活动
         startActivity(intent);
     }
 }

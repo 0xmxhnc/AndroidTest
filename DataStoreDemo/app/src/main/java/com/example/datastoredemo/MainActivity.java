@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     private MyDatabaseHelper dbHelper;
     Button button;
-    String[] data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 //查询student表中所有数据
                 Cursor cursor = db.query(false, "student", null, null, null ,null, null, null, null);
-                if (cursor.moveToFirst()){
+                if (cursor.moveToFirst()){//遍历对象
                     do {
-                        //遍历对象
+                        //向适配器中添加数据
                         adapter.add(cursor.getString(cursor.getColumnIndex("name")));
                         adapter.add(cursor.getString(cursor.getColumnIndex("no")));
                     }while (cursor.moveToNext());

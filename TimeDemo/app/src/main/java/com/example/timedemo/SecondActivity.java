@@ -17,11 +17,14 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         Intent intent = getIntent();
+        //获取主活动传递来的数据
         String data = intent.getStringExtra("extra_data");
+        //将String类型data转为Int类型，再强转为long型
         long num = (long) integer.parseInt(data);
         textView = (TextView)findViewById(R.id.text2);
         button = (Button)findViewById(R.id.button2);
 
+        //使用倒计时类，传入倒计时数值
         CountDownTimer timer = new CountDownTimer(num * 1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -34,6 +37,7 @@ public class SecondActivity extends AppCompatActivity {
                 button.setText("倒计时完毕");
             }
         };
+        //倒计时功能生效
         timer.start();
     }
 
