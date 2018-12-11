@@ -44,7 +44,9 @@ public class MyAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view;
 
+        //提升加载效率
         if (convertView == null) {
+            //将布局文件实例化转换为View
             view = layoutInflater.inflate(R.layout.person_information, null);
         }
         else{
@@ -52,12 +54,19 @@ public class MyAdapter extends BaseAdapter {
         }
 
         //绑定布局
+        //获取联系人姓名到textView
         TextView textView = (TextView)view.findViewById(R.id.text_name);
+        //获取联系人电话到textView1
         TextView textView1 = (TextView)view.findViewById(R.id.text_phonenumber);
+        //获取联系人头像到imageView
         ImageView imageView = (ImageView)view.findViewById(R.id.image);
+
         //设置内容
+        //设置联系人姓名到TextView控件
         textView.setText(personlist.get(position).getName());
+        //设置联系人电话到TextView控件
         textView1.setText(personlist.get(position).getPhonenum());
+        //设置联系人头像到ImageView控件
         imageView.setImageResource(personlist.get(position).getImageId());
 
         return view;
