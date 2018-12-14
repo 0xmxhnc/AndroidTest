@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="数据显示页面"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp" />
 
     <Button
@@ -17,6 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="点击显示数据"
+        android:textColor="@color/colorPrimary"
         android:textSize="18sp" />
 
     <ListView
